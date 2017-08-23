@@ -1,4 +1,4 @@
-variable "aws_access_key" {
+﻿variable "aws_access_key" {
     default = "aws_access_key"
 }
 
@@ -113,11 +113,6 @@ resource "aws_security_group" "firewall" {
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
   }
-}
-
-resource "aws_key_pair" "ss" {
-    key_name = "ss"
-    public_key = "${var.instance_key}"
 }
 
 resource "aws_instance" "ss" {
